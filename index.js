@@ -3,11 +3,11 @@ const mongoose=require("mongoose")
 const bcypt=require("bcryptjs")
 const dbConfig=require("./configs/db.configs")
 const serverConfig=require("./configs/server.configs")
-const cors=require("cors")
+// const cors=require("cors")
 const app=express()
 
 app.use(express.json())
-app.use(cors());
+// app.use(cors());
 mongoose.connect(dbConfig.DB_URL)
 const db=mongoose.connection
 db.on("error",(err)=>{
